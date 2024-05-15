@@ -1,0 +1,23 @@
+{
+  "name": "hoisting-example",
+  "version": "1.0.0",
+  "dependencies": {
+    "lodash": "4.17.21",
+    "webpack": "^5.91.0"
+  },
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "build:dedupe": "webpack --config webpack.dedupe.config.js"
+  },
+  "main": "index.js",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "fast-glob": "^3.3.2",
+    "fs-extra": "^11.2.0",
+    "semver": "^7.6.2",
+    "webpack-cli": "^5.1.4"
+  }
+}
