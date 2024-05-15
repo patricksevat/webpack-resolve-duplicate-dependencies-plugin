@@ -81,6 +81,14 @@ If you are interested in details, I recommend reading the source code (both of t
 
 To be honest, I'm not sure if this is the most elegant way, but it works well for our large repo (>10k modules, >10k dependencies)
 
+## Dedupe example
+
+`yarn build:dedupe` uses the `webpack.dedupe.config.js` file.
+
+You can compare `dist-dedupe/bundle.js` with `dist/bundle.js`
+
+You'll see that the dedupe bundle only bundles `lodash@3.10.1` once, whereas `dist/bundle.js` bundles `lodash@3.10.1` twice.
+
 ------
 
 That's all, I hope it helps make your build smaller! Do drop me a line on [Twitter/X](https://twitter.com/_Sevat) if it helped you out.
